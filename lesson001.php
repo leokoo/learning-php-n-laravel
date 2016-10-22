@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Lessons in PHP 001</title>
 	<style>
 		header {
 			background: #e3e3e3;
@@ -13,7 +13,9 @@
 </head>
 <body>
 	<header>
-		<h1>Hello World!</h1>
+		<h1>
+			<?php echo "Hello Malaysia! How are you, " . htmlspecialchars($_GET['name']); ?>
+		</h1>
 	</header>
 </body>
 </html>
