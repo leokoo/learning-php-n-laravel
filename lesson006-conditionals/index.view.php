@@ -21,6 +21,18 @@
 		<li>
 			<strong>Status:	</strong><?= $task['completed?'] ? 'Completed!' : 'Not done yet'; ?>
 		</li>
+		
+		<li>
+			<strong>Paid: </strong>
+					<?php if ($task['paid']): ?>
+						<span>&#9989;</span>
+					<?php else:  ?>
+						<span>Not paid</span>
+					<?php endif; ?>
+		</li>
+
+
+
 	</header>
 </body>
 </html>
