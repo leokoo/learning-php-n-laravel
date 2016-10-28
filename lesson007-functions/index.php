@@ -1,19 +1,13 @@
 <?php
 
-$age = [		'John' => 21, 
-						'Leo' => 30, 
-						'Andrew' => 18, 
+$people = [		'John',
+						'Leo'
 					];
 
-function dd($input) {
-	echo '<pre>';
-		die(var_dump($input));
-	echo '</pre>';
-}
+require 'functions.php';
 
 //require calls the view file
+age_checker(19);
+dd($people);
 //require 'index.view.php';
-
-dd('Hello World!');
-
 ?>

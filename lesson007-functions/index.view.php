@@ -6,6 +6,9 @@
 </head>
 <body>
 	<header>
+			<?php foreach ($people as $man) : ?>
+				<li><?= $man; ?> </li>
+			<?php endforeach ?>
 
 	</header>
 </body>
