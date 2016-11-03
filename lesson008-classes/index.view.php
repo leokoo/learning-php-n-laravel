@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Lessons in PHP-007 : Functions</title>
+	<title>Lessons in PHP-008 : Classes</title>
 </head>
 <body>
 	<header>
