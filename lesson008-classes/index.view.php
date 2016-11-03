@@ -6,7 +6,11 @@
 </head>
 <body>
 	<header>
-	
+		<ul>
+			<?php foreach ($tasks as $task) : ?>
+				<li><?php echo $task->description; ?></li>
+			<?php endforeach; ?>
+		</ul>
 	</header>
 </body>
 </html>

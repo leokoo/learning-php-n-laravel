@@ -3,9 +3,9 @@ require 'functions.php';
 
 class Task {
 	// A function in a class is called a method
-	protected $description;
+	public $description;
 	// protected & public are encapsulation
-	protected $completed = false;
+	public $completed = false;
 
 	public function __construct( $description ) 
 	{
@@ -25,14 +25,19 @@ class Task {
 	}
 }
 
-$task  = new Task( 'Go to the store' );
+$tasks  = [
+	new Task('Wash the car'),
+	new Task('Take the dog for a walk'),
+	new Task('Meet Miss F')
+];
+//a new Task object
 // Any arguments in the instantiation can be accepted in the constructor
+// We can have an array of tasks
 
-$task->complete();
-var_dump($task->isComplete());
+//$task->complete();
+//var_dump($task->isComplete());
 
-//dd($task);
 
 //require calls the view file
-//require 'index.view.php';
+require 'index.view.php';
 ?>
