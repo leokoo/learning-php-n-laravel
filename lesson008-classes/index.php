@@ -34,6 +34,7 @@ $tasks  = [
 // Any arguments in the instantiation can be accepted in the constructor
 // We can have an array of tasks
 
+$tasks[2]->complete();
 //$task->complete();
 //var_dump($task->isComplete());
 
