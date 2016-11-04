@@ -8,11 +8,11 @@ try {
 	die('Cannot connect lah');
 }
 
-	// $statement = $pdo->prepare('select * from todos');
+	$statement = $pdo->prepare('select * from todos');
 
-	// $statement->execute();
+	$statement->execute();
 
-	// var_dump($statement->fetchAll());
+	var_dump($statement->fetchAll());
 
 //require calls the view file
 //require 'index.view.php';

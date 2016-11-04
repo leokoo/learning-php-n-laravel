@@ -9,9 +9,12 @@
 ##Create a new Database
 * create database mytodo;
 
+##Switching database
+* use mytodo;
+
 ##Commands
 * e.g. of a table
-* create table todos (id integer PRIMARY KEY AUTO_INCREMENT, description text NOT NULL, completed boolean NOT NULL);
+	* create table todos (id integer PRIMARY KEY AUTO_INCREMENT, description text NOT NULL, completed boolean NOT NULL);
 * notice that it has the name (id), type (integer) and modifiers (PRIMARY KEY AUTO_INCREMENT)
 
 * How to see the newly created todo table?
