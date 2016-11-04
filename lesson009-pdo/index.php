@@ -3,7 +3,7 @@
 
 // Catching exceptions
 try {
-	$pdo = new PDO('mysql:host=127.0.0.1;dbname=wordpress', 'homestead', 'secret');
+	$pdo = new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'homestead', 'secret');
 } catch (PDOException $e) {
 	die('Cannot connect lah');
 }
