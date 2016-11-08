@@ -25,3 +25,6 @@
 
 * How to see everything from the todos table
 	* select * from todos;
+
+##To connect to the database
+* Use PDO, not mysql_connect()
