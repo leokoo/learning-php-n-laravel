@@ -12,9 +12,9 @@ try {
 
 	$statement->execute();
 
-	$results = $statement->fetchAll(PDO::FETCH_OBJ);
-
-	var_dump($results[1]->description);
+//fetchAll fetches all results. We have to careful with this. Perhaps fetch is there's too many results
+//PDO::FETCH_OBJ stores each row into an object
+	$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
 
 //require calls the view file
 require 'index.view.php';
