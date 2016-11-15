@@ -3,6 +3,8 @@
 require 'database/Connection.php';
 require 'database/QueryBuilder.php';
 
-$pdo = Connection::make();
-
-$query = new QueryBuilder($pdo);
+return new QueryBuilder(
+	Connection::make()
+	);
+// in-lining the pdo in order to shorten/refactor the code
+//removing $query and changing it to a return. And then we call it on index.php
