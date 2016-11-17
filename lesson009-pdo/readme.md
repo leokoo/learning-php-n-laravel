@@ -32,10 +32,9 @@
 ##Using Exceptions
 * http://php.net/manual/en/language.exceptions.php
 	* We use exceptions to find out if the PDO connects to the DB
-	*```
-			try {
+	* example : 
+	```try {
 					return new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'homestead', 'secret');
 			} catch (PDOException $e) {
 					die($e->getMessage()); //getMessage() will return a description of what went wrong
-			}
-	```
+			}```
