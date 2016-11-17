@@ -1,30 +1,30 @@
 # Understanding MYSQL for Laravel
 ##To Access MySQL (instead of installing the homebrew version), start by SSH into Homestead's vagrant
-* homestead ssh
-* mysql -u homestead -psecret
+* `homestead ssh`
+* `mysql -u homestead -psecret`
 
 ##To see all databases
-* show databases;
+* `show databases;`
 
 ##Create a new Database
-* create database mytodo;
+* `create database mytodo;`
 
 ##Switching database
-* use mytodo;
+* `use mytodo;`
 
 ##Commands
 * e.g. of a table
-	* create table todos (id integer PRIMARY KEY AUTO_INCREMENT, description text NOT NULL, completed boolean NOT NULL);
+	* `create table todos (id integer PRIMARY KEY AUTO_INCREMENT, description text NOT NULL, completed boolean NOT NULL)`;
 * notice that it has the name (id), type (integer) and modifiers (PRIMARY KEY AUTO_INCREMENT)
 
 * How to see the newly created todo table?
-	* describe todos;
+	* `describe todos;`
 
 * How to insert data into the table
-	* insert into todos (description, completed) values('Go to the store', false);
+	* `insert into todos (description, completed) values('Go to the store', false);`
 
 * How to see everything from the todos table
-	* select * from todos;
+	* `select * from todos;`
 
 ##To connect to the database
 * Use PDO, not mysql_connect()
@@ -33,8 +33,10 @@
 * http://php.net/manual/en/language.exceptions.php
 	* We use exceptions to find out if the PDO connects to the DB
 	* example : 
-	```try {
+	```
+		try {
 					return new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'homestead', 'secret');
 			} catch (PDOException $e) {
 					die($e->getMessage()); //getMessage() will return a description of what went wrong
-			}```
+			}
+	```
