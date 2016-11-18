@@ -3,7 +3,7 @@
 require 'database/Connection.php';
 require 'database/QueryBuilder.php';
 
-// so here we have a new connection and then inject it back to the Querybuilder.php file
+// so here we have a new connection and then inject it back to the Querybuilder.php file via instantiating a new QueryBuilder
 return new QueryBuilder(
 	Connection::make()
 	);
