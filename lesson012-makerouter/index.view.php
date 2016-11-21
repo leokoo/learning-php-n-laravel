@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Lessons in PHP-010 : Hide Passwords</title>
+	<title>Lessons in PHP-012 : Make A Router</title>
 </head>
 <body>
 	<header>
