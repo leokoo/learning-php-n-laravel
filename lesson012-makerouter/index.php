@@ -1,11 +1,12 @@
 <?php
 
 //We can switch from $query to anything we want, as long as it describe what it does. Like now, I've changed it to $db
-$db = require 'bootstrap.php';
-// We removed the require 'tasks.php', as we could do without it.
+$db = require 'core/bootstrap.php';
 
-$tasks = $db->selectAll('todos');
-
-//require calls the view file
-require 'index.view.php';
+$routes = [
+	'' => 'controllers/index.php',
+	'about' => 'controllers/about.php',
+	'about-culture' => 'controllers/about-culture.php',
+	'contact' => 'controllers/contact.php'
+]
 ?>
