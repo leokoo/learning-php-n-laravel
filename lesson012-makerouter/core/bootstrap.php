@@ -1,8 +1,9 @@
 <?php
 // the bootstrap file is like a little factory worker. To build up the query
 $config = require 'config.php';
-require 'database/Connection.php';
-require 'database/QueryBuilder.php';
+require 'core/Router.php';
+require 'core/database/Connection.php';
+require 'core/database/QueryBuilder.php';
 
 // so here we have a new connection and then inject it back to the Querybuilder.php file via instantiating a new QueryBuilder
 return new QueryBuilder(
