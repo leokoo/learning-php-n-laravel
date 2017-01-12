@@ -4,7 +4,7 @@ function connectToDb()
 {
 	// We use exceptions to find out if the PDO connects to the DB
 	try {
-		return new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'homestead', 'secret');
+		return new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', '');
 	} catch (PDOException $e) {
 		die($e->getMessage()); //getMessage() will return a description of what went wrong
 	}
