@@ -7,4 +7,7 @@ $router = new Router;
 
 require 'routes.php';
 
-require $router->direct('about/culture');
+// We're getting the URI that we need minus the / on the front and back of the URI
+$uri = trim($_SERVER['REQUEST_URI'], '/');
+
+require $router->direct($uri);
