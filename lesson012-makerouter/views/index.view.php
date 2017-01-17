@@ -7,8 +7,8 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href="/lesson012-makerouter/about.php">About Page</a></li>
-			<li><a href="/lesson012-makerouter/contact.php">Contact Page</a></li>
+			<li><a href="/about.php">About Page</a></li>
+			<li><a href="/contact.php">Contact Page</a></li>
 		</ul>
 	</nav>
 	<header>
