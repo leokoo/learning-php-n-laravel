@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>
-		Our Culture
+		Our Culture at <?= $name ?>
 	</h1>
 </body>
 </html>
