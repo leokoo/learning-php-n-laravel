@@ -22,5 +22,7 @@ $posts = [
 ];
 
 $unpublishedPosts = array_filter($posts, function ($post) {
-	return ! $posts->published;
+	return ! $post->published;
 });
+
+var_dump($unpublishedPosts);
