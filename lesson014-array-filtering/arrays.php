@@ -20,3 +20,7 @@ $posts = [
 	new Post('My Third Post', true),
 	new Post('My Last Post', false)
 ];
+
+$unpublishedPosts = array_filter($posts, function ($post) {
+	return ! $posts->published;
+});
