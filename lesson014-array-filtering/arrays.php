@@ -21,8 +21,17 @@ $posts = [
 	new Post('My Last Post', false)
 ];
 
-$unpublishedPosts = array_filter($posts, function ($post) {
-	return ! $post->published;
-});
+// $unpublishedPosts = array_filter($posts, function ($post) {
+// 	// putting the bang ensures that only unpublished posts are shown in the var_dump results
+// 	return ! $post->published;
+// });
 
-var_dump($unpublishedPosts);
+// var_dump($unpublishedPosts);
+
+// If we want to change all the statuses in the array to true, we then use array_map
+$modified = array_map(function ($post) {
+	$post->published = true;
+	return $post;
+}, $posts);
+
+var_dump($modified);
