@@ -54,6 +54,6 @@ $posts = array_map(function ($post)
 
 // var_dump($posts);
 // unlike the previous example, we're fetching a key called title.
-$authors = array_column($posts, 'author');
+$authors = array_column($posts, 'author', 'title');
 
 var_dump($authors);
