@@ -7,18 +7,21 @@ class Post
 // published is used as a boolean.
 	public $published;
 
-		public function __construct($title, $published)
+	public $author;
+
+		public function __construct($title, $author, $published)
 	{
 		$this->title = $title;
+		$this->author = $author;
 		$this->published = $published;
 	}
 }
 
 $posts = [
-	new Post('My First Post', true),
-	new Post('My Second Post', true),
-	new Post('My Third Post', true),
-	new Post('My Fourth Post', false)
+	new Post('My First Post', 'Leo', true),
+	new Post('My Second Post', 'Jimmy', true),
+	new Post('My Third Post', 'Andy', true),
+	new Post('My Fourth Post', 'Devan', false)
 ];
 
 // var_dump($posts);
@@ -51,6 +54,6 @@ $posts = array_map(function ($post)
 
 // var_dump($posts);
 // unlike the previous example, we're fetching a key called title.
-$titles = array_column($posts, 'title');
+$authors = array_column($posts, 'author');
 
-var_dump($titles);
+var_dump($authors);
