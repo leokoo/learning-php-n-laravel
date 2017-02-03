@@ -2,7 +2,11 @@
 
 class Router
 {
-	protected $routes = [];
+	protected $routes = [
+// Registering routes for get and post requests
+	'GET' => [],
+	'POST' => []
+	];
 
 	public static function load($file)
 	{
