@@ -5,6 +5,7 @@
 
 <form method="GET" action="/names">
 	<input name="name"></input>
+	<button type="submit">Submit your name</button>
 </form>
 
 <?php require('partials/footer.php'); ?>
