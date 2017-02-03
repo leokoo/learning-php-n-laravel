@@ -2,7 +2,7 @@
 
 class Router
 {
-	protected $routes = [
+	public $routes = [
 // Registering routes for get and post requests
 	'GET' => [],
 	'POST' => []
@@ -20,6 +20,27 @@ class Router
 	public function define($routes) 
 	{
 		$this->routes = $routes;
+	}
+
+	public function get($uri, $controller)
+	{
+		//$this->routes['GET'] looks funny but actually returns an array
+		//Thus it'll be:
+		//$getRoutes = ['foo'];
+		//$getRoutes = ['Leo'];
+		//$getRoutes['uri'] = ['Baz'];
+
+		//[
+		// 0 => 'foo',
+		// 1 => 'Leo',
+		// 'uri' => 'Baz'
+		//]
+		$this->routes['GET'][$uri] = $controller;
+	}
+
+		public function post($uri, $controller)
+	{
+		$this->routes['POST'][$uri] = $controller;
 	}
 
 	public function direct($uri)
