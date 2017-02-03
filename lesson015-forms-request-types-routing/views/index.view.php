@@ -1,15 +1,9 @@
 <?php require('partials/head.php'); ?>
-	<header>
-		<ul>
-			<?php foreach ($tasks as $task) : ?>
-				<li>
-					<?php if ($task->completed) : ?>
-						<strike><?= $task->description; ?></strike>
-					<?php else : ?>
-						<?php echo $task->description; ?>
-					<?php endif; ?>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-	</header>
+
+// Creating a form for us to learn more about forms in PHP
+<h1>Submit Your Name</h1>
+
+<form method="GET" action="/names">
+
+</form>
 <?php require('partials/footer.php'); ?>
