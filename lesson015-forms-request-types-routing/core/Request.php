@@ -11,4 +11,9 @@ class Request
 		// We're getting the URI that we need minus the / on the front and back of the URI
 		// return trim($_SERVER['REQUEST_URI'], '/');
 	}
+
+	public static function method()
+	{
+		return $_SERVER['REQUEST_METHOD'];
+	}
 }

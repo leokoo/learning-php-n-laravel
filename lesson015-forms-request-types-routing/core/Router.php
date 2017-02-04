@@ -22,8 +22,6 @@ class Router
 		$this->routes = $routes;
 	}
 
-	public function get($uri, $controller)
-	{
 		//$this->routes['GET'] looks funny but actually returns an array
 		//Thus it'll be:
 		//$getRoutes = ['foo'];
@@ -35,6 +33,9 @@ class Router
 		// 1 => 'Leo',
 		// 'uri' => 'Baz'
 		//]
+
+	public function get($uri, $controller)
+	{
 		$this->routes['GET'][$uri] = $controller;
 	}
 
@@ -43,9 +44,9 @@ class Router
 		$this->routes['POST'][$uri] = $controller;
 	}
 
-	public function direct($uri)
+	public function direct($uri, $requestType)
 	{
-		if (array_key_exists($uri, $this->routes)) {
+		if (array_key_exists($uri, $this->routes[$requestType])) {
 			return $this->routes[$uri];
 		}
 
