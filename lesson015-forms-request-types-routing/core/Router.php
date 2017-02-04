@@ -17,11 +17,6 @@ class Router
 		return $router;
 	}
 
-	public function define($routes) 
-	{
-		$this->routes = $routes;
-	}
-
 		//$this->routes['GET'] looks funny but actually returns an array
 		//Thus it'll be:
 		//$getRoutes = ['foo'];
@@ -47,7 +42,7 @@ class Router
 	public function direct($uri, $requestType)
 	{
 		if (array_key_exists($uri, $this->routes[$requestType])) {
-			return $this->routes[$uri];
+			return $this->routes[$requestType][$uri];
 		}
 
 		throw new Exception('No routes defined for this URI.');
