@@ -17,6 +17,12 @@ class QueryBuilder
 
 		$statement->execute();
 
+	//How to build a new method to insert into the table?
+	public function insertform($table)
+	{
+//		$sql = $this->pdo->prepare("insert into {$table} (name) values ('".$_POST['name']."')")
+	}
+
 	//fetchAll fetches all results. We have to careful with this. Perhaps fetch is there's too many results
 	//PDO::FETCH_OBJ stores each row into an object
 		return $statement->fetchAll(PDO::FETCH_CLASS);
