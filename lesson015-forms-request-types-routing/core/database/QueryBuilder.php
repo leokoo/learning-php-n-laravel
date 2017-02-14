@@ -20,7 +20,10 @@ class QueryBuilder
 	//How to build a new method to insert into the table?
 	public function insertform($table)
 	{
-//		$sql = $this->pdo->prepare("insert into {$table} (name) values ('".$_POST['name']."')")
+		$sql = $this->pdo->prepare("insert into {$table} (name) VALUES (:name)");
+		$sql->bindParam(':name', $name);
+		$sql->execute();
+		echo "New records created successfully";
 	}
 
 	//fetchAll fetches all results. We have to careful with this. Perhaps fetch is there's too many results
