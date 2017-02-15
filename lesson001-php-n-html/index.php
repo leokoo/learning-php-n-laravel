@@ -14,7 +14,8 @@
 <body>
 	<header>
 		<h1>
-			<?php echo "Hello Malaysia! How are you, " . htmlspecialchars($_GET['name']); ?>
+			<?php echo "Hello there! How are you, " . htmlspecialchars($_GET['name']) . "!";?><br>
+			<?php echo "I didn't know you work as a, " . htmlspecialchars($_GET['job']); ?>
 		</h1>
 	</header>
 </body>
