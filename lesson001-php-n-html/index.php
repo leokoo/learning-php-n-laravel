@@ -23,3 +23,4 @@
 
 <!--Home work -!>
 <!-Create a sentence dynamically with the format http://website/?key=value
+Solved with "http://localhost:8888/?name=Leo&job=lawyer" -!>
