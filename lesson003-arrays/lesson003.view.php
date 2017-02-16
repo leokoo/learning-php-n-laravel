@@ -15,7 +15,7 @@
 	<header>
 		<h1>
 			<?php foreach ($animals as $animal) : ?>
-				<li><?= $animal; ?> </li>
+				<li><?= $animal; ?></li>
 			<?php endforeach ?>
 		</h1>
 	</header>
