@@ -7,6 +7,11 @@ $tasks = [	'title' => 'Coding in PHP',
 					];
 
 //require calls the view file
-require 'index.view.php';
-
 ?>
+
+<pre>
+	<?php die(var_dump($tasks)); ?>
+</pre>
+
+<?php
+require 'index.view.php';
