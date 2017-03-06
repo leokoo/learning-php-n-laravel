@@ -1,7 +1,18 @@
 <?php
 
-class Shape {
+// we make our class abstract if we are never going to instantiate it
+abstract class Shape {
+	protected $color;
 
+	public function __construct($color = 'red')
+	{
+		$this->color = $color;
+	}
+
+	public function getColor()
+	{
+		return $this->color;
+	}
 }
 
 class Square extends Shape {
@@ -23,5 +34,5 @@ class Triangle extends Shape {
 	}
 }
 
-echo (new Square)->getArea();
-echo (new Triangle)->getArea();
+echo (new Square)->getColor();
+// echo (new Triangle)->getArea();
