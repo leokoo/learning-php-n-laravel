@@ -1,8 +1,8 @@
 <?php
 
 class Person {
-	public $age;
-	public $name;
+	protected $age;
+	protected $name;
 
 	public function __construct($name) 
 	{
@@ -20,12 +20,14 @@ class Person {
 
 	public function getAge()
 	{
-		return $this->age;
+		// In order to return the amount of days John has rotected
+		return $this->age * 365;
 	}
 }
 
 $john = new Person('John Doe');
 $john->setAge(30);
+$john->age = 3;
 /* The lack of encapsulation enables people to directly access the property
 e.g: $john->age = 3;
 That's why we need to proceed and encapsulate the age property */
