@@ -33,6 +33,7 @@ class Triangle extends Shape {
 		return .5 * $this->base * $this->height;
 	}
 }
-
-echo (new Square)->getColor();
+// when we don't specify the color, the Square will inherit the color from the Shape class. Otherwise, it'll have its own color
+echo (new Square())->getColor();
+echo (new Square('green'))->getColor();
 // echo (new Triangle)->getArea();
