@@ -20,7 +20,7 @@ class Person {
 
 	public function getAge()
 	{
-		// In order to return the amount of days John has rotected
+		// In order to return the amount of days John has lived
 		return $this->age * 365;
 	}
 }
