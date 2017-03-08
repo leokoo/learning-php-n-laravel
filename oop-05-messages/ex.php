@@ -32,6 +32,10 @@ class Staff {
 	// Staff will serve as a collection
 	protected $members = [];
 
+	function __construct($members = [])
+	{
+		$this->members = $members;
+	}
 	public function add(Person $person)
 	{
 		$this->members[] = $person;
@@ -40,10 +44,11 @@ class Staff {
 
 $jeffrey = New Person('Jeffrey Way');
 
-$staff = New Staff;
-
+$staff = New Staff([$jeffrey]);
+// Because the business depends upon the $staff to run, we need to create a new instance of Staff before we can create a new instance of Business
 $laracasts = New Business($staff);
 
-$laracasts->hire($jeffrey);
+// $laracasts->hire($jeffrey);
+$laracasts->hire(New Person('Jane Doe'));
 
 var_dump($staff);
