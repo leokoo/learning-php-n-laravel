@@ -16,18 +16,25 @@ echo Math::add(1, 2, 3, 4);
 // var_dump($math->add(1, 2, 3, 4));
 
 class Person {
-	public static $age = 1;
-
+	public $age = 1;
+// changed from public static $age = 1;
 	public function haveBirthday()
 	{
-		static::$age += 1;
+		$this->age += 1;
+	}
+
+	public function age()
+	{
+		return $this->age;
 	}
 }
 
 $joe = New Person;
 $joe->haveBirthday();
 $joe->haveBirthday();
+echo $joe->age();
 // If $joe has two birthdays, the result would be 3. However, if we have another person who has a birthday, $age will then be 4, not two. This is because static properties are shared
 $angela = New Person;
 $angela->haveBirthday();
-echo Person::$age;
+// echo Person::$age;
+echo $angela->age();
