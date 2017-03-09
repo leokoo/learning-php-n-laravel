@@ -1,5 +1,6 @@
 <?php
 
+namespace Acme;
 class Staff {
 	// Staff will serve as a collection
 	protected $members = [];
