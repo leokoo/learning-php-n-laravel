@@ -1,6 +1,8 @@
 <?php
 
 namespace Acme;
+
+use Acme\Users\Person;
 // The Business hires a Person. And the Person then joins the Staff
 class Business {
 	protected $staff;

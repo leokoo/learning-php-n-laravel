@@ -8,7 +8,7 @@ require 'src/Business.php';
 require 'src/Staff.php';
 */
 
-Use Acme\Person;
+Use Acme\Users\Person;
 Use Acme\Business;
 Use Acme\Staff;
 
