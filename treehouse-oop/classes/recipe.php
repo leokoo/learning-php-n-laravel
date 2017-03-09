@@ -2,12 +2,27 @@
 // Treehouse's PHP is lacking compared to Laracasts :(
 class Recipe
 {
-    public $title = "best cookbook";
+    private $title = "best cookbook";
     public $ingredients = [];
     public $instructions = [];
     public $yield;
     public $tag = [];
     public $source = "Kevin Koo";
+
+    // Getter and Setter methods helps us block off private properties
+    public function setTitle($title)
+    {
+    	/*
+    	$this->title gives access to the property
+			$title itself is the passed argument
+			*/
+    	$this->title = ucwords($title);
+    }
+
+    public function getTitle()
+    {
+    	return $this->title;
+    }
 
     public function displayRecipe()
     {
@@ -21,5 +36,5 @@ $recipe1 = new Recipe();
 $recipe1->source = "Fiona Ho";
 $malaysianRecipe = new Recipe();
 // echo $malaysianRecipe->source = "Leo Koo" . "'s cooking is the best";
-// echo "$recipe1->source" . "'s recipe is boring ";
+$recipe1->setTitle('my first recipe');
 echo $recipe1->displayRecipe();
