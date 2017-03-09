@@ -34,7 +34,3 @@ $joe->haveBirthday();
 $joe->haveBirthday();
 echo $joe->age();
 // If $joe has two birthdays, the result would be 3. However, if we have another person who has a birthday, $age will then be 4, not two. This is because static properties are shared
-$angela = New Person;
-$angela->haveBirthday();
-// echo Person::$age;
-echo $angela->age();
