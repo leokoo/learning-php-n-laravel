@@ -12,6 +12,7 @@ class Recipe
     	'tsp', 'tbsp', 'cup', 'oz', 'lb', 'fl oz', 'pint', 'quart', 'gallon'
     ];
 
+    // Title
     // Getter and Setter methods helps us block off private properties, adjust formatting and even make calculations before returning the value
     public function setTitle($title)
     {
@@ -27,6 +28,7 @@ class Recipe
     	return $this->title;
     }
 
+    // Ingredients
     // by having a null in the argument, we can bypass the fact that certain ingredients might not have certain properties
     public function addIngredient($item, $amount = null, $measure = null)
     {
@@ -50,6 +52,7 @@ class Recipe
     	return $this->ingredients;
     }
 
+    // Instructions
     public function addInstruction($string)
     {
     	$this->instructions[] = $string;
@@ -60,6 +63,18 @@ class Recipe
     	return $this->instructions;
     }
 
+    // Yield
+    public function setYield($yield)
+    {
+    	$this->yield = $yield;
+    }
+
+    public function getYield()
+    {
+    	return $this->yield;
+    }
+
+    // Tags
     public function addTag($tag)
     {
     	$this->tags[] = strtolower($tag);
@@ -70,6 +85,18 @@ class Recipe
     	return $this->tags;
     }
 
+    // Source
+    public function setSource($source)
+    {
+    	$this->source = ucwords($source);
+    }
+
+    public function getSource()
+    {
+    	return $this->source;
+    }
+
+    // Others
     public function displayRecipe()
     {
     	/* $this->property can only be used in a method to reference a property, just like how we use the instantiated object name ($recipe1) outside of it */

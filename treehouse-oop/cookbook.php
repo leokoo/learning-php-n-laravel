@@ -5,7 +5,7 @@ require 'classes/recipe.php';
 $recipe1 = new Recipe();
 
 // echo helps us display the property
-//$recipe1->source = "Fiona Ho";
+$recipe1->setSource('Fiona Ho');
 $malaysianRecipe = new Recipe();
 $recipe1->setTitle('my first recipe');
 
@@ -24,7 +24,14 @@ $recipe1->addInstruction('Get some eggs');
 $recipe1->addInstruction('fry the veggies');
 echo implode("\n", $recipe1->getInstructions());
 
-//On Tags
+// On Tags
 $recipe1->addTag('Super Malaysian Breakfast');
 $recipe1->addTag('Delicious Nasi Lemak');
 echo implode(", ", $recipe1->getTags());
+
+// On Yield
+$recipe1->setYield('10 servings');
+echo $recipe1->getYield();
+
+//On Source
+echo $recipe1->getSource();
