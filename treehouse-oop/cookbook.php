@@ -25,3 +25,4 @@ $recipe1->setYield('10 servings');
 
 // On Rendering
 echo Render::displayRecipe($recipe1);
+echo $recipe1;

@@ -17,8 +17,13 @@ class Recipe
     {
         $this->setTitle($title);
     }
-    // Title
-    // Getter and Setter methods helps us block off private properties, adjust formatting and even make calculations before returning the value
+
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+
+    // Title : Getter and Setter methods helps us block off private properties, adjust formatting and even make calculations before returning the value
     public function setTitle($title)
     {
     	/*
