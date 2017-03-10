@@ -3,12 +3,11 @@
 require 'classes/recipe.php';
 require 'classes/render.php';
 
-$recipe1 = new Recipe();
+$recipe1 = new Recipe('My new recipe');
 
 // echo helps us display the property
 $recipe1->setSource('Fiona Ho');
 $malaysianRecipe = new Recipe();
-$recipe1->setTitle('my first recipe');
 
 $recipe1->addIngredient('chicken', 2, 'LB');
 $recipe1->addIngredient('chinese mushrooms', 5, 'oZ');
