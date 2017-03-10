@@ -95,11 +95,4 @@ class Recipe
     {
     	return $this->source;
     }
-
-    // Others
-    public function displayRecipe()
-    {
-    	/* $this->property can only be used in a method to reference a property, just like how we use the instantiated object name ($recipe1) outside of it */
-    	return $this->title . " by " . $this->source;
-    }
 }
