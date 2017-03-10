@@ -1,13 +1,12 @@
 <?php
-// Treehouse's PHP is lacking compared to Laracasts :(
 class Recipe
 {
     private $title = "best cookbook";
-    public $ingredients = [];
-    public $instructions = [];
-    public $yield;
-    public $tag = [];
-    public $source = "Kevin Koo";
+    private $ingredients = [];
+    private $instructions = [];
+    private $yield;
+    private $tags = [];
+    private $source = "Kevin Koo";
 
     private $measurements = [
     	'tsp', 'tbsp', 'cup', 'oz', 'lb', 'fl oz', 'pint', 'quart', 'gallon'
@@ -49,6 +48,26 @@ class Recipe
     public function getIngredients()
     {
     	return $this->ingredients;
+    }
+
+    public function addInstruction($string)
+    {
+    	$this->instructions[] = $string;
+    }
+
+    public function getInstructions()
+    {
+    	return $this->instructions;
+    }
+
+    public function addTag($tag)
+    {
+    	$this->tags[] = strtolower($tag);
+    }
+
+    public function getTags()
+    {
+    	return $this->tags;
     }
 
     public function displayRecipe()
