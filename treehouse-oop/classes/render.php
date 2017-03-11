@@ -11,6 +11,13 @@ class Render
 		return $output;
 	}
 
+  public function __toString()
+  {
+      $output = "\n The following methods are available for " .  __CLASS__ ." objects \n ";
+      $output .= implode("\n ", get_class_methods(__CLASS__));
+      return $output;
+  }
+
   public static function displayRecipe($recipe)
   {
   	/* $this->property can only be used in a method to reference a property, just like how we use the instantiated object name ($recipe1) outside of it */
