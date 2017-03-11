@@ -22,6 +22,10 @@ class Recipe
     {
         $output = "You are calling a " . __CLASS__ . " object with the title \"";
         $output .= $this->getTitle() . "\"";
+        $output .= "\n It is stored in the file "  . basename(__FILE__) . " in " . __DIR__ . ".";
+        $output .= "This displays at line " . __LINE__  . " in the method " .  __METHOD__;
+        $output .= "\n The following methods are available for this object \n";
+        $output .= implode(" ,", get_class_methods(__CLASS__));
         return $output;
     }
 
