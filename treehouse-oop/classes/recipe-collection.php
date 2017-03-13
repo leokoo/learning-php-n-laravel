@@ -3,7 +3,7 @@
 class RecipeCollection
 {
 	private $title;
-	private $recipe = [];
+	private $recipes = [];
 
     //  We pull in the same constructor methods from recipe.php in order to give recipe's a title when we instantiate
     public function __construct($title = null)
@@ -28,5 +28,15 @@ class RecipeCollection
     public function getTitle()
     {
         return $this->title;
+    }
+
+    public function addRecipe($recipe)
+    {
+    	$this->recipes[] = $recipe;
+    }
+
+    public function getRecipe()
+    {
+    	return $this->recipes;
     }
 }
