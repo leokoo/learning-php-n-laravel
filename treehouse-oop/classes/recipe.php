@@ -12,10 +12,29 @@ class Recipe
     	'tsp', 'tbsp', 'cup', 'oz', 'lb', 'fl oz', 'pint', 'quart', 'gallon'
     ];
 
-    // Construct
+    // Constructor
     public function __construct($title = null)
     {
         $this->setTitle($title);
+    }
+
+    // Title : Getter and Setter methods helps us block off private properties, adjust formatting and even make calculations before returning the value
+    public function setTitle($title)
+    {
+        /*
+        $this->title gives access to the property
+        $title itself is the passed argument
+        */
+        if (empty($title)) {
+            $this->title = null;
+        } else {
+            $this->title = ucwords($title);            
+        }
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
     }
 
     public function __toString()
@@ -27,25 +46,6 @@ class Recipe
         $output .= "\n The following methods are available for this object \n ";
         $output .= implode("\n ", get_class_methods(__CLASS__));
         return $output;
-    }
-
-    // Title : Getter and Setter methods helps us block off private properties, adjust formatting and even make calculations before returning the value
-    public function setTitle($title)
-    {
-    	/*
-    	$this->title gives access to the property
-		$title itself is the passed argument
-		*/
-        if (empty($title)) {
-            $this->title = null;
-        } else {
-            $this->title = ucwords($title);            
-        }
-    }
-
-    public function getTitle()
-    {
-    	return $this->title;
     }
 
     // Ingredients

@@ -2,7 +2,7 @@
 // https://www.w3schools.com/php/php_includes.asp
 require 'classes/recipe.php';
 require 'classes/render.php';
-require 'inc/allrecipes.php';
+require 'inc/all-recipes.php';
 
 // On Rendering
 echo Render::displayRecipe($belgian_waffles);
