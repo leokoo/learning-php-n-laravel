@@ -2,7 +2,7 @@
 
 namespace Acme;
 
-class AuthController {
+class AuthController implements RespondsToUserRegistration {
 	// How we write a method depends on the scale of the program. It's about choosing the right tool for the job. Scope and context.
 	protected $registration;
 
