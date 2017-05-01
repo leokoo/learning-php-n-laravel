@@ -17,8 +17,8 @@ class QueryBuilder
 
 		$statement->execute();
 
-	//How to build a new method to insert into the table?
-	public function insertform($table)
+	//Homework : How to build a new method to insert into the table?
+	public function insertForm($table)
 	{
 		$sql = $this->pdo->prepare("insert into {$table} (name) VALUES (:name)");
 		$sql->bindParam(':name', $name);
