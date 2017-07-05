@@ -1,8 +1,14 @@
-##To connect to the database
-* Use PDO, not `mysql_connect()`
+## PDO
 
-##Using Exceptions
-* http://php.net/manual/en/language.exceptions.php
+links: 	http://php.net/manual/en/language.exceptions.php
+		http://php.net/manual/en/exception.getmessage.php
+		http://php.net/manual/en/pdostatement.fetchobject.php
+
+## To connect to the database
+- Use PDO, not `mysql_connect()`
+
+## Using Exceptions
+
 	* We use exceptions to find out if the PDO connects to the DB
 	* example : 
 	```
@@ -12,11 +18,12 @@
 					die($e->getMessage()); //getMessage() will return a description of what went wrong
 			}
 	```
-##Using var_dump with fetchAll gets all objects. To remove duplicates, use
+## Using var_dump with fetchAll gets all objects. To remove duplicates, use
 ```
 	$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
 ```
-##To fetch it into a class instead
+
+## To fetch it into a class instead
 ```
 	$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 ```

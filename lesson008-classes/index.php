@@ -53,4 +53,3 @@ $tasks[2]->complete();
 
 //require calls the view file
 require 'index.view.php';
-?>

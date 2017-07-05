@@ -1,6 +1,7 @@
 ## Classes
 - A class is like a blueprint.
 - Each instance of a class can consist of different properties
+- Isolate reusable code within a class method or a function
 
 # Class' Methods
 - Functions inside of classes are called, methods
@@ -33,3 +34,32 @@ Non Static
 	$this->property
 Static
 	self::$property
+
+## Static Method
+- Static methods enable us to call it without instantiating an object
+- So if we just use a normal function
+```
+	<?php
+	class Foo {
+	    public function aNormalMethod() {
+	        // ...
+	    }
+	}
+	$foo = new Foo;
+	$foo->aNormalMethod();
+	?>
+```
+- If it is a static method
+```
+	<?php
+	class Foo {
+	    public static function aStaticMethod() {
+	        // ...
+	    }
+	}
+
+	Foo::aStaticMethod();
+	$classname = 'Foo';
+	$classname::aStaticMethod(); // As of PHP 5.3.0
+	?>
+```

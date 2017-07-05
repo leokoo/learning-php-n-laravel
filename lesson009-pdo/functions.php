@@ -2,11 +2,19 @@
 
 function connectToDb()
 {
-	// We use exceptions to find out if the PDO connects to the DB
+	/* 
+		We use exceptions to find out if the PDO connects to the DB
+		http://php.net/manual/en/language.exceptions.php
+	*/
+
 	try {
 		return new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', '');
 	} catch (PDOException $e) {
-		die($e->getMessage()); //getMessage() will return a description of what went wrong
+		die($e->getMessage()); 
+		/* 
+			getMessage() will return a description of what went wrong
+			http://php.net/manual/en/exception.getmessage.php
+		*/
 	}
 }
 
@@ -26,5 +34,3 @@ function dd($input) {
 		die(var_dump($input));
 	echo '</pre>';
 }
-
-?>
