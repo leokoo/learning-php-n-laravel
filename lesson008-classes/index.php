@@ -9,10 +9,20 @@ class Task {
 
 	public function __construct( $description ) 
 	{
-	// __construct() is the constructor; automatically triggered on instantiation
 		$this->description = $description;
-		// We're setting a property to '$this' object
+	// assign an argument ($description) to the variable ($this->description)
 	}
+
+	// We can use any methods within the class to interact with it
+
+	/* 
+		To set the value of an object
+
+		Within a class, we use
+			$this->variable = value;
+		Outside of the class, we use
+			$instantiated_class->variable = value;
+	*/
 
 	public function complete() 
 	{
@@ -23,6 +33,7 @@ class Task {
 	{
 		return $this->completed;
 	}
+
 }
 
 $tasks  = [
@@ -30,14 +41,15 @@ $tasks  = [
 	new Task('Take the dog for a walk'),
 	new Task('Meet Miss F')
 ];
-//a new Task object
+// a new Task object
 // Any arguments in the instantiation can be accepted in the constructor
 // We can have an array of tasks
 
 $tasks[2]->complete();
-//$task->complete();
-//var_dump($task->isComplete());
-
+/*
+## To access a method from the object
+	$task->complete();
+*/
 
 //require calls the view file
 require 'index.view.php';

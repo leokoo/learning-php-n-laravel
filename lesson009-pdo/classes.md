@@ -1,4 +1,8 @@
-##Classes
+## Classes
+- A class is like a blueprint.
+- Each instance of a class can consist of different properties
+
+# Class' Methods
 - Functions inside of classes are called, methods
 - Functions outside of classes are called, functions
 - constructor functions are automatically triggered on instantiation
@@ -9,10 +13,23 @@
 	- e.g. : 
 	```
 		class Task {
-			// __construct is a constructor
 			public function __construct($description) {
-				$this->description = description;
+				$this->description = $description;
+			// assign an argument ($description) to variable ($this->description)
 			}
 	```
-	`$this->description` means that we're assigning a property (description) to $this object
-- We can use function within the class to interact with a property
+
+- We can use any methods within the class to interact with it
+
+## To set the value of an object
+
+Within a class, we use
+	$this->variable = value;
+Outside of the class, we use
+	$instantiated_class->variable = value;
+
+## Accessing Property within class
+Non Static
+	$this->property
+Static
+	self::$property

@@ -1,8 +1,9 @@
 <?php
 
-$people = [		'John',
-						'Leo'
-					];
+$people = [		
+	'John',
+	'Leo'
+];
 
 require 'functions.php';
 

@@ -6,8 +6,8 @@
 </head>
 <body>
 	<header>
-			<?php foreach ($tasks as $key => $value) : ?>
-				<li><?= $key ?>:  <?= $value; ?> </li>
+			<?php foreach ($tasks as $type => $value) : ?>
+				<li><?= $type ?>:  <?= $value; ?> </li>
 			<?php endforeach ?>
 	</header>
 </body>
