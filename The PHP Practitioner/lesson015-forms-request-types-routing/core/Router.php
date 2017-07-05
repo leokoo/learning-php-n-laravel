@@ -32,6 +32,10 @@ class Router
 	public function get($uri, $controller)
 	{
 		$this->routes['GET'][$uri] = $controller;
+		/* 
+			Hack : $this->routes['GET'] = [array_item]
+			[array_item][$uri] results in key => $uri
+		*/
 	}
 
 		public function post($uri, $controller)
