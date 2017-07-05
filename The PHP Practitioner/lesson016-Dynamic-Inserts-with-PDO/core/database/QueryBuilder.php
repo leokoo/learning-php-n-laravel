@@ -16,6 +16,7 @@ class QueryBuilder
 		$statement = $this->pdo->prepare("select * from {$table}");
 
 		$statement->execute();
+	}
 
 	//How to build a new method to insert into the table?
 
