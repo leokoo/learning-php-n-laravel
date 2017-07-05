@@ -6,6 +6,7 @@ class Router
 
 	public static function load($file)
 	{
+		// http://php.net/manual/ro/language.oop5.basic.php#example-175
 		$router = new static;
 
 		require $file;

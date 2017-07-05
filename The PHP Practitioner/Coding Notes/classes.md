@@ -12,10 +12,6 @@ links:
 - Each instance of a class can consist of different properties
 - Isolate reusable code within a class method or a function
 
-## On creating Classes
-
-- Name it base on whatever feels right to you, and then make your class / method / function offer that functionality
-
 # Class' Methods
 
 - Functions inside of classes are called, methods
@@ -58,6 +54,7 @@ Static
 
 - Static methods enable us to call it without instantiating an object
 - So if we just use a normal function
+
 ```
 	<?php
 	class Foo {
@@ -69,7 +66,9 @@ Static
 	$foo->aNormalMethod();
 	?>
 ```
+
 - If it is a static method
+
 ```
 	<?php
 	class Foo {
@@ -83,3 +82,7 @@ Static
 	$classname::aStaticMethod(); // As of PHP 5.3.0
 	?>
 ```
+## Difference between static vs instance method
+
+- A static method != an instance method.
+- It doesn't have the $this object
