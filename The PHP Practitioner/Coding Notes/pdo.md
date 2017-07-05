@@ -1,10 +1,12 @@
 ## PDO
 
-links: 	http://php.net/manual/en/language.exceptions.php
-		http://php.net/manual/en/exception.getmessage.php
-		http://php.net/manual/en/pdostatement.fetchobject.php
+links: 	
+	http://php.net/manual/en/language.exceptions.php
+	http://php.net/manual/en/exception.getmessage.php
+	http://php.net/manual/en/pdostatement.fetchobject.php
 
 ## To connect to the database
+
 - Use PDO, not `mysql_connect()`
 
 ## Using Exceptions
@@ -19,12 +21,15 @@ links: 	http://php.net/manual/en/language.exceptions.php
 			}
 	```
 ## Using var_dump with fetchAll gets all objects. To remove duplicates, use
+
 ```
 	$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
 ```
 
 ## To fetch it into a class instead
+
 ```
 	$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 ```
+
 *The aim is to isolate reusable code to a function/method

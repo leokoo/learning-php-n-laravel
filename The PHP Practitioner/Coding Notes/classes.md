@@ -1,13 +1,26 @@
 ## Classes
+
+links:
+	http://php.net/manual/en/language.oop5.basic.php
+	http://php.net/manual/en/language.oop5.properties.php
+	http://php.net/manual/en/language.oop5.decon.php
+	http://php.net/manual/en/language.oop5.inheritance.php 
+	http://php.net/manual/en/language.oop5.static.php
+	http://php.net/manual/en/language.oop5.typehinting.php
+
 - A class is like a blueprint.
 - Each instance of a class can consist of different properties
 - Isolate reusable code within a class method or a function
 
+## On creating Classes
+
+- Name it base on whatever feels right to you, and then make your class / method / function offer that functionality
+
 # Class' Methods
+
 - Functions inside of classes are called, methods
 - Functions outside of classes are called, functions
-- constructor functions are automatically triggered on instantiation
-	`new Task('Wash the car')`
+- We can use any methods within the class to interact with it
 - the instance of a class is an object
 	- e.g. `$task = new Task('Go to the store');`
 - We can assign a property to the object by using the $this syntax
@@ -20,7 +33,12 @@
 			}
 	```
 
-- We can use any methods within the class to interact with it
+## Constructor
+
+- Is a place for the Class to declare its dependencies or the collaborators needed to do its job
+- The constructor is automatically triggered on instantiation
+	`new Task('Wash the car')`
+
 
 ## To set the value of an object
 
@@ -30,12 +48,14 @@ Outside of the class, we use
 	$instantiated_class->variable = value;
 
 ## Accessing Property within class
+
 Non Static
 	$this->property
 Static
 	self::$property
 
 ## Static Method
+
 - Static methods enable us to call it without instantiating an object
 - So if we just use a normal function
 ```
