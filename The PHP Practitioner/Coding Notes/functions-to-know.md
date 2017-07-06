@@ -9,3 +9,9 @@ Array Map - When you want to modify/transform what gets return
 
 Array Column - Return the values from a single column in the input array
 	http://php.net/manual/en/function.array-column.php
+
+Implode - Join array elements with a string
+	http://php.net/manual/en/function.implode.php
+
+Header - http://php.net/manual/en/function.header.php
+	http://php.net/manual/en/function.header.php
