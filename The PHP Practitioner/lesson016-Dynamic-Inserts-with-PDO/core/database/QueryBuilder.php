@@ -4,6 +4,7 @@
 	links
 		http://php.net/manual/en/pdo.prepare.php
 		http://php.net/manual/en/pdostatement.execute.php
+		http://php.net/manual/en/function.implode.php
 */
 class QueryBuilder
 {
@@ -35,7 +36,9 @@ class QueryBuilder
 		// 	values (%column_values)
 		$sql = sprintf(
 			'insert into %s (%s) values (%s)',
-			'one', 'two', 'three'
+			$table,
+			implode(', ', array_keys($parameters)), 
+			':' . implode(', :',array_keys($parameters))
 		);
 	die(var_dump($sql));
 	}
