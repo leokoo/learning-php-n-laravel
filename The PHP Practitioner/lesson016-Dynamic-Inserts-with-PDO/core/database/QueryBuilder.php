@@ -40,8 +40,16 @@ class QueryBuilder
 			implode(', ', array_keys($parameters)), 
 			':' . implode(', :',array_keys($parameters))
 		);
-	die(var_dump($sql));
+	// die(var_dump($sql));
+
+		try {
+			$statement = $this->pdo->prepare($sql);
+
+			$statement->execute($parameters);
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+
+
 	}
-
-
 }
