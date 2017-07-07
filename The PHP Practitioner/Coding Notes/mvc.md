@@ -1,7 +1,6 @@
 # Controller
 
 links:
-	http://php.net/manual/en/function.array-key-exists.php
 	http://php.net/manual/en/language.exceptions.php
 	http://php.net/manual/en/reserved.variables.server.php
 

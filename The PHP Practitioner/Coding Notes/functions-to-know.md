@@ -15,3 +15,7 @@ Implode - Join array elements with a string
 
 Header - http://php.net/manual/en/function.header.php
 	http://php.net/manual/en/function.header.php
+
+Array Key Exists - Checks if the given key or index exists in the array
+	`bool array_key_exists ( mixed $key , array $array )`
+	http://php.net/manual/en/function.array-key-exists.php
