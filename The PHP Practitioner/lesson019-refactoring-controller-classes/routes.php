@@ -2,6 +2,6 @@
 
 $router->get('', 'PagesController@home');
 $router->get('about', 'PagesController@about');
-$router->post('contact', 'PagesController@contact');
+$router->get('contact', 'PagesController@contact');
 
 // var_dump($router->routes);
