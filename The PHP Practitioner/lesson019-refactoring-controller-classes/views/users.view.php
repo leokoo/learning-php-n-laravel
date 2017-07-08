@@ -8,7 +8,7 @@
 
 <h1>Submit Your Name</h1>
 
-<form method="POST" action="/names">
+<form method="POST" action="/users">
 	<input name="name"></input>
 	<button type="submit">Submit your name</button>
 </form> 

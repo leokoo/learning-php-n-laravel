@@ -21,3 +21,8 @@ function view($name, $data=[])
 	
 	return require "views/{$name}.view.php";
 }
+
+function redirect($data)
+{
+	header("Location: /{$data}");
+}
