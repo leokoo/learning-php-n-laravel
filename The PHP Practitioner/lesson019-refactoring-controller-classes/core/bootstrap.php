@@ -14,3 +14,10 @@ App::bind('database', new QueryBuilder(
 
 // in-lining the pdo in order to shorten/refactor the code
 //removing $query and changing it to a return. And then we call it on index.php
+
+function view($name, $data=[])
+{
+	extract($data);
+	
+	return require "views/{$name}.view.php";
+}
