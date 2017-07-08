@@ -17,18 +17,6 @@ class Router
 		return $router;
 	}
 
-		//$this->routes['GET'] looks funny but actually returns an array
-		//Thus it'll be:
-		//$getRoutes = ['foo'];
-		//$getRoutes = ['Leo'];
-		//$getRoutes['uri'] = ['Baz'];
-
-		//[
-		// 0 => 'foo',
-		// 1 => 'Leo',
-		// 'uri' => 'Baz'
-		//]
-
 	public function get($uri, $controller)
 	{
 		$this->routes['GET'][$uri] = $controller;
@@ -42,11 +30,29 @@ class Router
 	public function direct($uri, $requestType)
 	{
 		if (array_key_exists($uri, $this->routes[$requestType])) {
-			return $this->routes[$requestType][$uri];
+			
+			// die($this->routes[$requestType][$uri]; results in PageController@home without the request type
+			return $this->callAction(
+				// Splat operator - http://php.net/manual/en/migration56.new-features.php
+				...explode('@', $this->routes[$requestType][$uri])
+			);
 		}
 
 		throw new Exception('No routes defined for this URI.');
 	}
 
-	// what is new($ controller)?
+	protected function callAction($controller, $action)
+	{
+		/*	method_exists — Checks if the class method exists
+			http://php.net/manual/en/function.method-exists.php */
+
+		if (! method_exists($controller, $action))
+		{
+			throw new Exception(
+				"{$controller} does not respond to {$action} action"
+			);
+		}
+
+		return (new $controller)->$action();
+	}
 }
