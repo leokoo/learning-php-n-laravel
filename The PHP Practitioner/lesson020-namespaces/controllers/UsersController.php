@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Core\App; // because if we don't do this, it'll reference App\Controllers\App
+
 class UsersController
 {
 

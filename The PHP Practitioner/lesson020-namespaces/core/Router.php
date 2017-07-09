@@ -48,7 +48,8 @@ class Router
 		/*	method_exists — Checks if the class method exists
 			http://php.net/manual/en/function.method-exists.php */
 
-		$controller = new $controller; // because $controller = PagesController
+		$controller = "App\\Controllers\\{$controller}"; // because $controller = PagesController
+		$controller = new $controller;
 
 		if (! method_exists($controller, $action))
 		{
