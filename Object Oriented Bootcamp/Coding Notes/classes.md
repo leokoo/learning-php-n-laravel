@@ -9,8 +9,31 @@ links:
 	http://php.net/manual/en/language.oop5.typehinting.php
 
 - A class is like a blueprint.
+- For example, if we're building a task app, we should have a task class
+
+# Variables vs Properties
+- A variable inside a class is called a property
 - Each instance of a class can consist of different properties
 - Isolate reusable code within a class method or a function
+
+## To access and set the value of a property
+
+Within a class, we use
+	$this->property = value;
+Outside of the class, we use
+	$instantiated_class->property = value;
+	e.g.
+	`
+		$task = New Task;
+		$task->property = value;
+	`
+
+## Accessing Property within class
+
+Non Static
+	$this->property
+Static
+	self::$property
 
 # Class' Methods
 
@@ -19,36 +42,23 @@ links:
 - We can use any methods within the class to interact with it
 - the instance of a class is an object
 	- e.g. `$task = new Task('Go to the store');`
-- We can assign a property to the object by using the $this syntax
-	- e.g. : 
-	```
-		class Task {
-			public function __construct($description) {
-				$this->description = $description;
-			// assign an argument ($description) to variable ($this->description)
-			}
-	```
 
 ## Constructor
 
 - Is a place for the Class to declare its dependencies or the collaborators needed to do its job
 - The constructor is automatically triggered on instantiation
+- We can assign arguments to the construct method and then to the $description property
+	- e.g. : 
+	```
+		class Task {
+			public $description;
+
+			public function __construct($description) {
+				$this->description = $description;
+			}
+	```
 	`new Task('Wash the car')`
 
-
-## To set the value of an object
-
-Within a class, we use
-	$this->variable = value;
-Outside of the class, we use
-	$instantiated_class->variable = value;
-
-## Accessing Property within class
-
-Non Static
-	$this->property
-Static
-	self::$property
 
 ## Static Method
 

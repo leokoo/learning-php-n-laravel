@@ -1,6 +1,7 @@
 <?php
 
 class Task {
+	// variables inside classes == property
 	public $description;
 	public $title;
 	public $completed = false;
