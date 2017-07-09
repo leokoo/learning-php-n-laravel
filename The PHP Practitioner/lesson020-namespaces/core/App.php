@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Core;
 /*
 	links:
 	 	http://php.net/manual/en/function.array-key-exists.php
