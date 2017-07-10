@@ -55,6 +55,20 @@ class ConcreteClass1 extends AbstractClass
 ```
 abstract class Shape
 {
+
+}
+
+class Square extends Shape
+{
+
+}
+```
+
+## When to use Abstract Method?
+- When every sub class needs to define it's own method, then we define the method in the parent class as abstract
+```
+abstract class Shape
+{
 	abstract protected function getArea();
 }
 
@@ -70,11 +84,7 @@ class Circle extends Shape
 {
 	public function getArea()
 	{
-	
+
 	}
 }
-```
-
-## When to use Abstract Method?
-- When every sub class needs to define it's own method, then we define the method in the parent class as abstract
 ```

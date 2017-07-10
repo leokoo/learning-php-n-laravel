@@ -22,8 +22,8 @@
 
 	}
 }
-```
+
 $lightswitch = New LightSwitch;
 $lightswitch->connect(); // We want to prevent this
-
+```
 
