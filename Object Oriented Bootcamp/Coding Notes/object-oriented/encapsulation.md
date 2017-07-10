@@ -5,7 +5,7 @@
 - private - means only exclusive to the class. Meaning, if you extend the LightSwitch class, you still won't be able to access these methods
 - protected methods and properties are accessible via inheritance
 
-`	class LightSwitch 
+```	class LightSwitch 
 {
 	public function on()
 	{
@@ -22,7 +22,7 @@
 
 	}
 }
-
+```
 $lightswitch = New LightSwitch;
 $lightswitch->connect(); // We want to prevent this
 

@@ -1,4 +1,4 @@
-## Functions to know
+## Useful Functions
 
 Array Filter - Filters elements of an array using a callback function.
 	http://php.net/manual/en/function.array-filter.php
