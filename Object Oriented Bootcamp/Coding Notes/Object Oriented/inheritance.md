@@ -64,12 +64,18 @@ class Square extends Shape
 }
 ```
 
+Thus, we cannot have
+```
+$shape = new Shape;
+```
+As that would throw an error
+
 ## When to use Abstract Method?
 - When every sub class needs to define it's own method, then we define the method in the parent class as abstract
 ```
 abstract class Shape
 {
-	abstract protected function getArea();
+	abstract protected function getArea(); // this forces the sub-classes to have this method
 }
 
 class Square extends Shape

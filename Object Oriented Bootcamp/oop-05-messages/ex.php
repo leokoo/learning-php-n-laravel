@@ -18,12 +18,8 @@ class Business {
 		$this->staff = $staff;
 	}
 
-	// by writing 'public function hire(Person $person)', we're using Type Hinting
 	public function hire(Person $person)
 	{
-		/* add $person to staff collection
-			$this->staff is a new instance of staff. Meaning == new Staff
-		*/
 		$this->staff->add($person);
 	}
 
