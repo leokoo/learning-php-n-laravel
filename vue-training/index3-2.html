@@ -1,0 +1,30 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+   <button type="submit" v-on:click="count += 1">
+     Increment Counter {{ count }}
+   </button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+          count: 0
+        },
+        methods: {
+          updateCount: function() {
+            this.count += 1;
+          }
+        }
+    });
+</script>
+</body>
+</html>
