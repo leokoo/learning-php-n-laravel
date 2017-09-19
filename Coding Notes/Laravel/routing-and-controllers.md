@@ -68,9 +68,14 @@ class TasksController extends Controller
 
 ### How to find all routes?
 
-Run from the command line
+- Run from the command line
 ```
 php artisan route:list
 ```
 
+## To cache your Laravel routes
+- Run the following from the command line. Ensure that you do not have route closures.
+```
+php artisan route:cache
+```
 
