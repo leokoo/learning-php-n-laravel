@@ -2,7 +2,7 @@
 
 namespace App;
 
-class TurkeySub extends Sub {
+class VeggieSub extends Sub {
 
 	public function addPrimaryToppings()
 	{
